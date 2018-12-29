@@ -1,0 +1,44 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.1.RELEASE'
+	}
+	repositories {
+		//这里个放国内的镜像源，如果第一连接通它绝对不会连接第二个
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.wgc'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	//这里可以添加国内镜像源、如果连接上第一镜像源文件，它不会在连接第二镜像源
+	mavenCentral()
+}
+
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+	implementation('org.springframework.boot:spring-boot-starter-data-redis')
+	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	runtimeOnly('mysql:mysql-connector-java')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	//compile是函数名， 后面是参数，以下三种写法都一样
+	compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.3.0'
+	//compile 'org.mariadb.jdbc:mariadb-java-client:2.3.0'
+	//compile('org.mariadb.jdbc:mariadb-java-client:2.3.0')
+
+	//监控包
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.1.1.RELEASE'
+
+}
