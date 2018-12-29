@@ -21,6 +21,8 @@ Spring-Boot项目的构建
 	
 ![a](springboot.png)
 	
+IDEA内的配置
 
-![a](springboot-2.png)
+![a](springboot-2.png)  
+
 2、
