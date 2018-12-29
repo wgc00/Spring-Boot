@@ -17,8 +17,10 @@ Spring-Boot项目的构建
 
 	接下来我们去 Spring Initializer 官网生成一个简单的项目：
 	
-	![a](springboot.png)
+	
+	
+![a](springboot.png)
 	
 
-	![a](springboot-2.png)
+![a](springboot-2.png)
 2、
