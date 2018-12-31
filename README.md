@@ -21,8 +21,11 @@ Spring-Boot项目的构建
 	
 ![a](springboot.png)
 	
-IDEA内的配置
+### IDEA内的配置
 
 ![a](springboot-1.png)  
 
+### application.properties资源文件
+	
+![a](springboot-2.png)
 2、
