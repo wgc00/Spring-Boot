@@ -34,3 +34,5 @@ Spring-Boot项目的构建
 ![a](img/1.png)
 
 ![a](img/2.png)
+
+## build.gradle配置
